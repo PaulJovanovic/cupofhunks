@@ -1,5 +1,5 @@
 class UserMailer < ActionMailer::Base
-  default from: "info@cupofhunks.com"
+	default :from => "info@cupofhunks.com"
 
   def send_email
     mail(:to => "mikebrando@comcast.net", :subject => "Let me know if you are gay...")

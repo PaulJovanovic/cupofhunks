@@ -17,6 +17,42 @@ h1, h2, h3, h4, h5, p {
 	font-weight: 200;
 }
 
+table {
+	width: 100%;
+}
+
+table.push-top td{
+	vertical-align: top;
+}
+
+.pal {
+	padding: 20px;
+}
+
+.pam {
+	padding: 10px;
+}
+
+.pas {
+	padding: 5px;
+}
+
+.pll {
+	padding-left: 20px;
+}
+
+.prl {
+	padding-right: 20px;
+}
+
+.mtl {
+	margin-top: 20px;
+}
+
+.ptl {
+	padding-top: 20px;
+}
+
 .container {
 	text-align: left;
 	width: 1004px;
@@ -27,10 +63,6 @@ h1, h2, h3, h4, h5, p {
 	padding: 40px;
 	padding-left: 60px;
 	padding-right: 60px;
-}
-
-.container .padding + .padding {
-	border-top: solid 1px #c5c0b8;
 }
 
 #header{
@@ -64,6 +96,7 @@ h1, h2, h3, h4, h5, p {
 	height: 414px;
 	z-index: 0;
 	background-image: url("/assets/arm.png");
+	background-repeat: no-repeat;
 }
 
 #header #navbar {
@@ -93,32 +126,103 @@ h1, h2, h3, h4, h5, p {
 	background-color: #e7e2d9;
 }
 
+#content .padding {
+	padding-top:0px;
+	padding-bottom:0px;
+}
+
+#content .container .padding .section {
+	padding-top: 30px;
+	padding-bottom: 40px;
+	position: relative;
+}
+
+#content .container .padding .section + .section {
+	border-top: solid 1px #c5c0b8;
+}
+
+#content .container .padding .section .one-third {
+	float: left;
+	width: 33.3%;
+}
+
+#content .container .padding .section .one-third img {
+	width: 100%;
+}
+
+#content .container .padding .section .two-thirds {
+	float: left;
+	width: 66.6%;
+}
+
+#content .container .padding .section .two-thirds table {
+	border-spacing:0;
+  	border-collapse:collapse;
+}
+
+#content .container .padding .section .two-thirds table p {
+	font-size: 16px;
+}
+
+#content .container .padding .section .two-thirds table td{
+	width: 50%;
+}
+
+#content .container .padding .section:after {
+	content: ".";
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden;
+}
+
 #content h2 {
 	color: #637c82;
 	font-size: 32px;
+}
+
+#content h3 {
+	color: #513742;
+	font-size: 24px;
+	margin-top:0;
+	margin-bottom:0;
+	font-weight: 500;
 }
 
 #content p {
 	color: #272023;
 	font-size: 18px;
 	font-weight: 300;
-	width: 530px;
 	line-height: 24px;
 }
 
 #content #get-started {
+	position: absolute;
+	right: 0;
 	margin-top: 15px;
 	height:60px;
 	width: 230px;
 	line-height: 60px;
 	background-color: #788d91;
-	float:right;
 	text-align: center;
 	color: #fff;
 	font-size: 32px;
 	-webkit-border-radius: 10px;
 	-moz-border-radius: 10px;
 	border-radius: 10px;
+}
+
+#content .btn {
+	padding:10px;
+	padding-left:20px;
+	padding-right:20px;
+	background-color: #788d91;
+	text-align: center;
+	color: #fff;
+	font-size: 18px;
+	-webkit-border-radius: 6px;
+	-moz-border-radius: 6px;
+	border-radius: 6px;
 }
 
 #content hr{

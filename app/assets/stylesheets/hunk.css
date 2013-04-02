@@ -53,6 +53,46 @@ table.push-top td{
 	padding-top: 20px;
 }
 
+.mtl {
+	margin-top: 20px;
+}
+
+.mtm {
+	margin-top: 10px;
+}
+
+.mts {
+	margin-top: 5px;
+}
+
+.ptl {
+	padding-top: 20px;
+}
+
+.ptm {
+	padding-top: 10px;
+}
+
+.pts {
+	padding-top: 5px;
+}
+
+.pbl {
+	padding-bottom: 20px;
+}
+
+.pbm {
+	padding-bottom: 10px;
+}
+
+.pbs {
+	padding-bottom: 5px;
+}
+
+.mrs {
+	margin-right: 5px;
+}
+
 .container {
 	text-align: left;
 	width: 1004px;
@@ -230,5 +270,44 @@ table.push-top td{
 }
 
 #footer {
+	color: #ffffff;
 	background-color: #2c292a;
+	font-size: 12px;
+}
+
+.one-fourth {
+	float:left;
+	width: 25%;
+}
+
+table td.one-fourth {
+	width: 25%;
+	float:none;
+}
+
+#footer h1{
+	color: #788d91;
+	font-size:24px;
+	margin:0;
+	margin-bottom: 10px;
+}
+
+#footer h2{
+	color: #e7e2d9;
+	font-size:21px;
+	margin:0;
+}
+
+#footer ul {
+	list-style-type: none;
+	padding:0;
+	font-size: 14px;
+}
+
+#footer ul li + li{
+	margin-top: 2px;
+}
+
+.small-logo {
+	width: 70px;
 }

@@ -1,0 +1,20 @@
+<div class="section">
+	<table>
+		<tr>
+			<td>
+				<%= @branding.id %>
+			</td>
+			<td>
+				<%= @branding.title %>
+			</td>
+			<td>
+				<%= @branding.description %>
+			</td>
+			<% @branding.photos.each do |photo| %>
+			<td>
+				<%= image_tag photo.image %>
+			</td>
+			<% end %>
+		</tr>
+	</table>
+</div>

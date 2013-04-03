@@ -2,18 +2,15 @@
 	<div class="container">
 		<div class="padding">
 			<div class="top">
-				<%= link_to root_path do %>
-					<img src="/assets/logonavsmall.png"/>
+				<%= link_to admin_index_path do %>
+					<img src="/assets/adminlogo.png"/>
 				<% end %>
 				<div id="navbar">
 					<div class="navbar-option">
-						<%= link_to "about", "#" %>
+						<%= link_to "branding", admin_brandings_path %>
 					</div>
 					<div class="navbar-option">
-						<%= link_to "branding", brandings_path %>
-					</div>
-					<div class="navbar-option">
-						<%= link_to "web", websites_path %>
+						<%= link_to "web", admin_websites_path %>
 					</div>
 				</div>
 			</div>

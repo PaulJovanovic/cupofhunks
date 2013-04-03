@@ -1,10 +1,15 @@
 Cup::Application.routes.draw do
 
-  devise_for :admins
+	namespace :admin do
+	  resources :brandings
+	  resources :websites
+	end
 
-  resources :seo
-  resources :branding
-  resources :web
+  devise_for :admin
+  resources :admin
+
+  resources :brandings
+  resources :websites
 
   root :to => "home#index"
 end

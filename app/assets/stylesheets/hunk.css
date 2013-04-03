@@ -10,7 +10,12 @@ body {
 }
 
 a {
+	color: #fff;
 	text-decoration: none;
+}
+
+a:hover {
+	color: #788d91;
 }
 
 h1, h2, h3, h4, h5, p {
@@ -128,8 +133,15 @@ table.push-top td{
 	position: relative;
 }
 
+#header.small .container .padding {
+	padding:10px;
+	padding-left: 60px;
+	padding-right: 60px;
+}
+
 #header #arm {
 	position: absolute;
+	margin-left: 80px;
 	left: 50%;
 	top:40px;
 	right:0;
@@ -147,13 +159,13 @@ table.push-top td{
 	font-size: 21px;
 }
 
+#header.small #navbar {
+	top:16px;
+}
+
 #header #navbar .navbar-option {
 	margin-right: 20px;
 	float:right;
-}
-
-#header #navbar .navbar-option a {
-	color: #fff;
 }
 
 #whitespace {
@@ -163,21 +175,17 @@ table.push-top td{
 }
 
 #content {
+	color: #272023;
 	background-color: #e7e2d9;
 }
 
-#content .padding {
-	padding-top:0px;
-	padding-bottom:0px;
-}
-
 #content .container .padding .section {
-	padding-top: 30px;
 	padding-bottom: 40px;
 	position: relative;
 }
 
 #content .container .padding .section + .section {
+	padding-top: 30px;
 	border-top: solid 1px #c5c0b8;
 }
 
@@ -208,6 +216,29 @@ table.push-top td{
 	width: 50%;
 }
 
+#content .container .padding .section .row {
+	margin-top:25px;
+}
+
+#content .container .padding .section .row:after {
+	content: ".";
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden;
+}
+
+#content .container .padding .section .row .project {
+	background-color: #fff;
+	width:278px;
+	height:200px;
+	float:left;
+}
+
+#content .container .padding .section .row .project + .project {
+	margin-left: 25px;
+}
+
 #content .container .padding .section:after {
 	content: ".";
     display: block;
@@ -216,12 +247,14 @@ table.push-top td{
     visibility: hidden;
 }
 
-#content h2 {
+#content h1 {
 	color: #637c82;
 	font-size: 32px;
+	font-weight: bold;
+	margin-top:0;
 }
 
-#content h3 {
+#content h2 {
 	color: #513742;
 	font-size: 24px;
 	margin-top:0;
@@ -289,7 +322,8 @@ table td.one-fourth {
 	color: #788d91;
 	font-size:24px;
 	margin:0;
-	margin-bottom: 10px;
+	margin-bottom: 5px;
+	font-weight: bold;
 }
 
 #footer h2{

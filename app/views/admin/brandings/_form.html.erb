@@ -1,0 +1,32 @@
+<div class="section">
+  <%= form_for [:admin, @branding], :html => {:multipart => true} do |f| %>
+    <% if @branding.errors.any? %>
+      <div id="error_explanation">
+        <h2><%= pluralize(@branding.errors.count, "error") %> prohibited this branding from being saved:</h2>
+
+        <ul>
+        <% @branding.errors.full_messages.each do |msg| %>
+          <li><%= msg %></li>
+        <% end %>
+        </ul>
+      </div>
+    <% end %>
+
+    <div class="field">
+      <%= f.label :title %><br />
+      <%= f.text_field :title %>
+    </div>
+    <div class="field">
+      <%= f.label :description %><br />
+      <%= f.text_field :description %>
+    </div>
+    <div class="field">
+      <%= f.fields_for :photos do |p| %>
+        <%= p.file_field :image %>
+      <% end %>
+    </div>
+    <div class="actions">
+      <%= f.submit %>
+    </div>
+  <% end %>
+</div>

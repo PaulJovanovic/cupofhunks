@@ -1,0 +1,9 @@
+admin/branding</br>
+
+<%= link_to "Add Branding", new_admin_branding_path %>
+
+<% @brandings.each do |branding| %>
+	<% branding.photos.each do |photo| %>
+		<%= image_tag photo.url(:thumb) %>
+	<% end %>
+<% end %>

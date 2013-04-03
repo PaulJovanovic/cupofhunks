@@ -229,9 +229,10 @@ table.push-top td{
 }
 
 #content .container .padding .section .row .project {
-	background-color: #fff;
-	width:278px;
-	height:200px;
+	background-color: #C1BBB0;
+	width:258px;
+	height:180px;
+	padding:10px;
 	float:left;
 }
 

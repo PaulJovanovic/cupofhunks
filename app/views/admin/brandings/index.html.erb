@@ -1,9 +1,11 @@
-admin/branding</br>
+<div class="section">
+	<%= link_to "Add Branding", new_admin_branding_path %>
 
-<%= link_to "Add Branding", new_admin_branding_path %>
-
-<% @brandings.each do |branding| %>
-	<% branding.photos.each do |photo| %>
-		<%= image_tag photo.url(:thumb) %>
+	<% @brandings.each do |branding| %>
+		<% branding.photos.each do |photo| %>
+			<%= image_tag photo.image.url(:thumb) %>
+		<% end %>
+		<%= link_to "Edit", edit_admin_branding_path(branding) %>
+		<%= link_to "Remove", branding, :confirm => "Delete #{branding.title} for good?", :method => :delete %>
 	<% end %>
-<% end %>
+</div>

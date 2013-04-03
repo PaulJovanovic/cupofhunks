@@ -1,5 +1,7 @@
 class Admin::BrandingsController < ApplicationController
 
+	layout "admin"
+
 	def index
 		@brandings = Branding.all
 
@@ -40,6 +42,7 @@ class Admin::BrandingsController < ApplicationController
 		else
 			redirect_to admin_brandings_path
 		end
+		
 	end
 
 end

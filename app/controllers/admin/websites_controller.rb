@@ -1,4 +1,6 @@
-class Admin::WebsitesController < AdminController
+class Admin::WebsitesController < ApplicationController
+
+	layout "admin"
 
 	def index
 		respond_to do |format|

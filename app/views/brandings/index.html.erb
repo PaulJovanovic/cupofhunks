@@ -1,1 +1,16 @@
-branding
+<div class="section">
+	<h1>Styled?</h1>
+	<% index = 0 %>
+	<% @brandings.each do |branding| %>
+		<% if index % 3 == 0 %>
+			<div class="row">
+		<% end %>
+				<div class="project">
+					<%= image_tag branding.photos.first.image.url(:small) %>
+				</div>
+		<% if index % 3 == 0 %>
+			</div>
+		<% end %>
+		<% index += 1 %>
+	<% end %>
+</div>

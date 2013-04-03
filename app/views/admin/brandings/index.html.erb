@@ -6,6 +6,6 @@
 			<%= image_tag photo.image.url(:thumb) %>
 		<% end %>
 		<%= link_to "Edit", edit_admin_branding_path(branding) %>
-		<%= link_to "Remove", branding, :confirm => "Delete #{branding.title} for good?", :method => :delete %>
+		<%= link_to "Remove", [:admin, branding], :confirm => "Delete #{branding.title} for good?", :method => :delete %>
 	<% end %>
 </div>

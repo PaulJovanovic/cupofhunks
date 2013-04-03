@@ -45,4 +45,13 @@ class Admin::BrandingsController < ApplicationController
 		
 	end
 
+	def destroy
+    @branding = Branding.find(params[:id])
+    @branding.destroy
+
+    respond_to do |format|
+      format.html { redirect_to admin_brandings_path }
+    end
+  end
+
 end

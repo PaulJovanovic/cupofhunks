@@ -160,12 +160,27 @@ table.push-top td{
 }
 
 #header.small #navbar {
-	top:16px;
+	top:0px;
+	line-height: 54px;
 }
 
 #header #navbar .navbar-option {
 	margin-right: 20px;
 	float:right;
+}
+
+#header #navbar .btn {
+	margin-top:9px;
+	padding-left:20px;
+	padding-right:20px;
+	background-color: #443c40;
+	text-align: center;
+	color: #fff;
+	font-size: 18px;
+	line-height: 36px;
+	-webkit-border-radius: 6px;
+	-moz-border-radius: 6px;
+	border-radius: 6px;
 }
 
 #whitespace {

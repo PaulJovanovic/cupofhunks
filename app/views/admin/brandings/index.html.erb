@@ -1,5 +1,8 @@
 <div class="section">
-	<%= link_to "Add Branding", new_admin_branding_path %>
+	<%= link_to new_admin_branding_path do %>
+		<div class="btn" style="float:right">add project</div>
+	<% end %>
+	<h1>Branding</h1>
 
 	<% @brandings.each do |branding| %>
 		<% branding.photos.each do |photo| %>

@@ -14,15 +14,15 @@
 					<td>
 						<%= image_tag branding.photos.first.image.url(:thumb) %>
 					</td>
-					<td>
+					<td class="title">
 						<%= branding.title %>
 					</td>
-					<td class="small">
+					<td class="action">
 						<%= link_to edit_admin_branding_path(branding) do %>
 							<i class="icon-edit"></i>
 						<% end %>
 					</td>
-					<td class="small">
+					<td class="action">
 						<%= link_to [:admin, branding], :confirm => "Delete #{branding.title}?", :method => :delete do %>
 							<i class="icon-remove"></i>
 						<% end %>

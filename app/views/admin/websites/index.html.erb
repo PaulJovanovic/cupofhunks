@@ -11,18 +11,18 @@
 					<td>
 						<i class="icon-move"></i>
 					</td>
-					<td>
+					<td class="title">
 						<%= image_tag website.photos.first.image.url(:thumb) %>
 					</td>
 					<td>
 						<%= website.title %>
 					</td>
-					<td class="small">
+					<td class="action">
 						<%= link_to edit_admin_website_path(website) do %>
 							<i class="icon-edit"></i>
 						<% end %>
 					</td>
-					<td class="small">
+					<td class="action">
 						<%= link_to [:admin, website], :confirm => "Delete #{branding.title}?", :method => :delete do %>
 							<i class="icon-remove"></i>
 						<% end %>
@@ -30,5 +30,6 @@
 				</tr>
 			</table>
 		</div>
+		<% alternate = alternate == "odd" ? "even" : "odd" %>
 	<% end %>
 </div>

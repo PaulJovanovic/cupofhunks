@@ -26,8 +26,9 @@ table {
 	width: 100%;
 }
 
-table td.small {
-	width:1%;
+table td.action {
+	width:40px;
+	text-align: right;
 }
 
 table.push-top td{
@@ -262,6 +263,8 @@ table.push-top td{
 #content .container .padding .section .list {
 	font-size: 21px;
 	padding:25px;
+	padding-top: 15px;
+	padding-bottom: 15px;
 	color: #272023;
 }
 

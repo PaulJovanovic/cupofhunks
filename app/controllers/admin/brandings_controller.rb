@@ -45,6 +45,22 @@ class Admin::BrandingsController < ApplicationController
 		
 	end
 
+	def edit
+    @branding = Branding.where(params[:id]).last
+  end
+
+  def update
+    @Branding = Branding.where(params[:id]).last
+
+    respond_to do |format|
+      if @branding.update_attributes(params[:branding])
+        format.html { redirect_to admin_brandings_path, notice: 'Branding was successfully updated.' }
+      else
+        format.html { render action: "edit" }
+      end
+    end
+  end
+
 	def destroy
     @branding = Branding.find(params[:id])
     @branding.destroy

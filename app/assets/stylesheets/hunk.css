@@ -265,6 +265,10 @@ table.push-top td{
 	color: #272023;
 }
 
+#content .container .padding .section .list table td.title {
+	width: 600px;
+}
+
 #content .container .padding .section .list.odd {
 	background-color:#CCC6BA;
 }

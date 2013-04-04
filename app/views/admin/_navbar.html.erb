@@ -7,15 +7,19 @@
 				<% end %>
 				<div id="navbar">
 					<div class="navbar-option">
-						<%= link_to "branding", admin_brandings_path %>
-					</div>
-					<div class="navbar-option">
-						<%= link_to "web", admin_websites_path %>
+						<%= link_to root_path do %>
+							<div class="btn">
+								<i class="icon-signout"></i>
+							</div>
+						<% end %>
 					</div>
 					<div class="navbar-option">
 						<%= link_to root_path do %>
-							<div class="btn">visit your site</div>
+							<div class="btn">view site</div>
 						<% end %>
+					</div>
+					<div class="navbar-option">
+						Mike
 					</div>
 				</div>
 			</div>

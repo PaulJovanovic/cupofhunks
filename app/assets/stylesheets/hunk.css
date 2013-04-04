@@ -170,11 +170,14 @@ table.push-top td{
 }
 
 #header #navbar .navbar-option {
-	margin-right: 20px;
 	float:right;
 }
 
-#header #navbar .btn {
+#header #navbar .navbar-option + .navbar-option {
+	margin-right: 20px;
+}
+
+#header .btn {
 	margin-top:9px;
 	padding-left:20px;
 	padding-right:20px;
@@ -186,6 +189,25 @@ table.push-top td{
 	-webkit-border-radius: 6px;
 	-moz-border-radius: 6px;
 	border-radius: 6px;
+}
+
+#header .btn:hover {
+	background-color: #788d91;
+}
+
+#sub-navbar {
+	background-color: #788d91;
+	color: #272023;
+}
+
+#sub-navbar .container .padding {
+	padding:15px;
+	padding-left: 60px;
+	padding-right: 60px;
+}
+
+#sub-navbar a:hover {
+	color: #272023;
 }
 
 #whitespace {
@@ -352,6 +374,10 @@ table.push-top td{
 	-webkit-border-radius: 6px;
 	-moz-border-radius: 6px;
 	border-radius: 6px;
+}
+
+#content .btn:hover {
+	background-color: #91A5A8;
 }
 
 #content hr{

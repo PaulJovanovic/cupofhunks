@@ -269,18 +269,18 @@ table.push-top td{
 }
 
 #content .container .padding .section .list table td.drag {
-	color: #A8A196;
+	color: #999388;
 	font-size: 32px;
 }
 
 #content .container .padding .section .list table td.title {
 	font-size:24px;
-	width: 600px;
+	width: 580px;
 }
 
 #content .container .padding .section .list table td.image {
-	padding-top:2px;
-	padding-left:15px;
+	padding-top:5px;
+	padding-left:20px;
 }
 
 #content .container .padding .section .list table td {

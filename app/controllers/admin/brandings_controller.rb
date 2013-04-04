@@ -46,11 +46,11 @@ class Admin::BrandingsController < ApplicationController
 	end
 
 	def edit
-    @branding = Branding.where(params[:id]).last
+    @branding = Branding.where(:id => params[:id]).last
   end
 
   def update
-    @Branding = Branding.where(params[:id]).last
+    @Branding = Branding.where(:id => params[:id]).last
 
     respond_to do |format|
       if @branding.update_attributes(params[:branding])

@@ -268,8 +268,23 @@ table.push-top td{
 	color: #272023;
 }
 
+#content .container .padding .section .list table td.drag {
+	font-size: 32px;
+}
+
 #content .container .padding .section .list table td.title {
+	font-weight: bold;
+	font-size:24px;
 	width: 600px;
+}
+
+#content .container .padding .section .list table td.image {
+	padding:0px;
+	padding-left:15px;
+}
+
+#content .container .padding .section .list table td {
+
 }
 
 #content .container .padding .section .list.odd {

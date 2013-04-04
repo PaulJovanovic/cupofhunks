@@ -26,6 +26,10 @@ table {
 	width: 100%;
 }
 
+table td.small {
+	width:1%;
+}
+
 table.push-top td{
 	vertical-align: top;
 }
@@ -253,6 +257,20 @@ table.push-top td{
 
 #content .container .padding .section .row .project + .project {
 	margin-left: 25px;
+}
+
+#content .container .padding .section .list {
+	font-size: 21px;
+	padding:25px;
+	color: #272023;
+}
+
+#content .container .padding .section .list.odd {
+	background-color:#CCC6BA;
+}
+
+#content .container .padding .section .list.even {
+	background-color:#B5AFA5;
 }
 
 #content .container .padding .section:after {

@@ -2,13 +2,34 @@
 	<%= link_to new_admin_branding_path do %>
 		<div class="btn" style="float:right">add project</div>
 	<% end %>
-	<h1>Branding</h1>
-
+	<h1 style="padding-top:5px;">Branding</h1>
+	<% alternate = "odd" %>
 	<% @brandings.each do |branding| %>
-		<% branding.photos.each do |photo| %>
-			<%= image_tag photo.image.url(:thumb) %>
-		<% end %>
-		<%= link_to "Edit", edit_admin_branding_path(branding) %>
-		<%= link_to "Remove", [:admin, branding], :confirm => "Delete #{branding.title}?", :method => :delete %>
+		<div class="list <%= alternate %>">
+			<table>
+				<tr>
+					<td>
+						<i class="icon-move"></i>
+					</td>
+					<td>
+						<%= image_tag branding.photos.first.image.url(:thumb) %>
+					</td>
+					<td>
+						<%= branding.title %>
+					</td>
+					<td class="small">
+						<%= link_to edit_admin_branding_path(branding) do %>
+							<i class="icon-edit"></i>
+						<% end %>
+					</td>
+					<td class="small">
+						<%= link_to [:admin, branding], :confirm => "Delete #{branding.title}?", :method => :delete do %>
+							<i class="icon-remove"></i>
+						<% end %>
+					</td>
+				</tr>
+			</table>
+		</div>
+		<% alternate = alternate == "odd" ? "even" : "odd" %>
 	<% end %>
 </div>

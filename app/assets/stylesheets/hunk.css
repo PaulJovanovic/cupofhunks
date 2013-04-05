@@ -284,6 +284,11 @@ table.push-top td{
 	height:180px;
 	padding:10px;
 	float:left;
+	cursor: pointer;
+}
+
+#content .container .padding .section .row .project:hover {
+	background-color: #788d91;
 }
 
 #content .container .padding .section .row .project + .project {

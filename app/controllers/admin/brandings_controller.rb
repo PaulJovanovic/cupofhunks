@@ -62,10 +62,15 @@ class Admin::BrandingsController < ApplicationController
   end
 
 	def destroy
-    @branding = Branding.find(params[:id])
-    @branding.destroy
+    branding = Branding.where(:id => params[:id]).last
 
-    respond_to do |format|
+    if branding
+	    Photo.where(:project_id => :params[:id]).each do |photo|
+	    	photo.destroy
+	  	end
+			branding.destroy
+	  end
+	  respond_to do |format|
       format.html { redirect_to admin_brandings_path }
     end
   end

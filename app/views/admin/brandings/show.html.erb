@@ -1,20 +1,13 @@
 <div class="section">
-	<table>
-		<tr>
-			<td>
-				<%= @branding.id %>
-			</td>
-			<td>
-				<%= @branding.title %>
-			</td>
-			<td>
-				<%= @branding.description %>
-			</td>
-			<% @branding.photos.each do |photo| %>
-			<td>
-				<%= image_tag photo.image %>
-			</td>
-			<% end %>
-		</tr>
-	</table>
+	<div class="two-third">
+		<h1><%= @branding.title %></h1>
+		<p>
+			<%= @branding.description %>
+		</p>
+	</div>
+	<div class="one-third">
+		<% @branding.photos.each do |photo| %>
+			<%= image_tag photo.image.url(:small) %>
+		<% end %>
+	</div>
 </div>

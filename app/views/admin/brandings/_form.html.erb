@@ -11,22 +11,44 @@
         </ul>
       </div>
     <% end %>
-
-    <div class="field">
-      <%= f.label :title %><br />
-      <%= f.text_field :title %>
-    </div>
-    <div class="field">
-      <%= f.label :description %><br />
-      <%= f.text_field :description %>
-    </div>
-    <div class="field">
-      <%= f.fields_for :photos do |p| %>
-        <%= p.file_field :image %>
-      <% end %>
+    <div class="section">
+      <div class="two-thirds">
+        <div class="prl">
+          <div class="field">
+            <%= f.label :title %><br />
+            <%= f.text_field :title %>
+          </div>
+          <div class="field">
+            <%= f.label :description %><br />
+            <%= f.text_area :description %>
+          </div>
+        </div>
+      </div>
+      <div class="one-third">
+        <label>Images</label><br/>
+        <div class="field">
+          <%= f.fields_for :photos do |p| %>
+            <%= p.file_field :image, :class => "multiple-file" %>
+          <% end %>
+        </div>
+        <br/>
+        <a class="add-image">
+          <div class="btn">
+            <i class="icon-plus"></i> image
+          </div>
+        </a>
+      </div>
     </div>
     <div class="actions">
       <%= f.submit %>
     </div>
   <% end %>
 </div>
+<script>
+  var image = jQuery(".field:last").html();
+  jQuery(document).ready(function(){
+    jQuery(".add-image").click(function(){
+      jQuery(".field:last").after("<br/><div class='field'>"+image+"</div>");
+    });
+  });
+</script>

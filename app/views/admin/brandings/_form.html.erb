@@ -55,6 +55,7 @@
     });
 
     jQuery(".submittable").submit(function() {
+      jQuery(this).closest("form").submit();
       jQuery(this).parent().html("<img src='/assets/logo.png'/>");
     });
   });

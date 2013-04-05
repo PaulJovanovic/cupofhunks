@@ -29,6 +29,7 @@
         <div class="field">
           <%= f.fields_for :photos do |p| %>
             <%= p.file_field :image, :class => "multiple-image" %>
+            <br/>
           <% end %>
         </div>
         <br/>
@@ -45,10 +46,10 @@
   <% end %>
 </div>
 <script>
-  var image_count = jQuery(".multiple-image");
+  var image_count = jQuery(".multiple-image").length;
   jQuery(document).ready(function(){
     jQuery(".add-image").click(function(){
-      var image = "<br/><div class='field'><input id='branding_photos_attributes_" + image_count + "_image' type='file' name='branding[photos_attributes][" + image_count + "][image]' />";
+      var image = "<div class='field'><input id='branding_photos_attributes_" + image_count + "_image' type='file' name='branding[photos_attributes][" + image_count + "][image]' /><br/>";
       image_count ++;
       jQuery(".field:last").after(image);
     });

@@ -9,14 +9,16 @@ Project.prototype.display = function() {
 };
 
 jQuery(".thumbnail").click(function(){
+	var controller = jQuery(this).attr("data-controller");
 	var id = jQuery(this).attr("data-id");
 	$.ajax({
         type: "GET",
-        url: "/brandings/"+id,
+        url: "/"+controller+"/"+id,
         dataType: "JSON" 
     }).success(function(data){
     	jQuery("body").append(data);
    		// var project = new Project(data.title, data.photos[0], data.description);
 			// project.display();
     });
+    alert(id);
 });

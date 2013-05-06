@@ -12,7 +12,7 @@ jQuery(".thumbnail").click(function(){
 	var id = jQuery(this).attr("data-id");
 	$.ajax({
         type: "GET",
-        url: "/users/"+id,
+        url: "/brandings/"+id,
         dataType: "JSON" 
     }).success(function(data){
     	jQuery("body").append(data);

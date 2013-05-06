@@ -4,7 +4,7 @@
 		<% if index % 3 == 0 %>
 			<div class="row">
 		<% end %>
-				<div class="project" data-id="#{branding.id}">
+				<%= "<div class='project' data-id='#{branding.id'>"
 					<%= image_tag branding.photos.first.image.url(:small) %>
 				</div>
 		<% if index % 3 == 2 %>

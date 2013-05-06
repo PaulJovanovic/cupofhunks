@@ -8,7 +8,6 @@ gem 'rails', '3.1.11'
 gem 'pg'
 
 gem 'devise'
-
 gem "mail"
 
 gem "paperclip"
@@ -24,6 +23,10 @@ group :assets do
   # gem 'therubyracer'
 
   gem 'uglifier', '>= 1.0.3'
+end
+
+group :development do
+	gem 'mysql2'
 end
 
 gem 'jquery-rails'

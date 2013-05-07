@@ -16,17 +16,17 @@ ProjectWindow.prototype.open = function(project, index){
 		}else{
 			this.index = index;
 			jQuery("#project-window").remove();
-			jQuery("#project-window").eq(index).before(this.css());
+			jQuery(".row").eq(index).before(this.css());
 		}
 	}else{
 		this.open = true;
 		this.index = index;
-		jQuery("#project-window").eq(index).before(this.css());
+		jQuery(".row").eq(index).before(this.css());
 	}
 }
 
 ProjectWindow.prototype.css = function(title, image, description){
-	return "<div id='"+title+"'><div class='image'><img src='"+image+"'/></div><div class='information'><h1>"+title+"</h1><p>"+description+"</p></div></div>";
+	return "<div id='project-window'><div class='image'><img src='"+image+"'/></div><div class='information'><h1>"+title+"</h1><p>"+description+"</p></div></div>";
 }
 
 var Project = function(title, image, description) {

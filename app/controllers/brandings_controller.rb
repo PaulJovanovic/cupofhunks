@@ -9,6 +9,7 @@ class BrandingsController < ApplicationController
 	def show
 		branding = Branding.where(:id => params[:id]).last
 
+		branding = {:title => branding.title, :image => branding.photos.first.image.url(:large), :description => branding.description} 
     render :json => branding
 	end
 
